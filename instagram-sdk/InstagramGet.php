@@ -9,7 +9,7 @@ class InstagramGet extends aInstagram implements iInstagram {
 
   public final function sendHttpHeader() {
     $ch = curl_init();
-    $endpoint = isset($this->getRawHttpHeader()['endpoint'])?$this->getRawHttpHeader['endpoint']:'';
+    $endpoint = isset($this->getRawHttpHeader()['endpoint'])?$this->getRawHttpHeader()['endpoint']:'';
     $url_send = $this->getApiBaseUrl().$endpoint.'?access_token='.$this->getAccessToken();
     if(isset($this->getRawHttpHeader()['param'])) {
       foreach ($this->getRawHttpHeader()['param'] as $key => $value)
