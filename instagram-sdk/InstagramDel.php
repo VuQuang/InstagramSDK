@@ -19,8 +19,7 @@ class InstagramDel extends aInstagram implements iInstagram {
     curl_close($ch);
   }
 
-  public final function getHttpResponse()
-  {
+  public final function getHttpResponse() {
       return $this->rawHttpResponse;
   }
 
