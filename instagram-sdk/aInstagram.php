@@ -48,16 +48,11 @@ abstract class aInstagram{
     return $this->API_BASE_URL;
   }
 
-  //array include "url" and "data" send
   public function setRawHttpHeader(array $rawHttpHeader) {
     $this->rawHttpHeader = $rawHttpHeader;
   }
 
   public function getRawHttpHeader() {
     return $this->rawHttpHeader;
-  }
-
-  public function getHttpResponse() {
-    return $this->rawHttpResponse;
   }
 }
