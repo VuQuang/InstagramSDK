@@ -9,6 +9,7 @@ class Analytics {
         $this->rawData = $InstagramRequest->sendHttpHeader()->getHttpResponse();
         $this->medias = $this->rawData['data'];
         if(!empty($this->rawData['pagination'])) {
+            $next_url = $this->rawData['pagination']['next_url'];
             while(!empty($next_url)) {
                 $InstagramRequest->setRawHttpHeader(array(
                     'endpoint' => $next_url
